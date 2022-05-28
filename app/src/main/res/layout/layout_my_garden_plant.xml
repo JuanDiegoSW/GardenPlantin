@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="145dp"
+        android:layout_marginTop="0dp"
+        app:cardElevation="10dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageCardView"
+        android:layout_marginStart="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"
+        app:cardCornerRadius="15dp"
+        android:layout_height="170dp">
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/plantImage"
+            android:src="@drawable/sample_plant" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="2dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardPreventCornerOverlap="true">
+
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ixora Greenery"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/greenVar2"
+                    android:id="@+id/txtPlantName"
+                    android:textStyle="bold" />
+
+<!--
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Azadirakta Indica"
+                    android:textStyle="italic"
+                    android:textSize="15sp"
+                    android:id="@+id/txtPlantScientificName"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@id/txtPlantNormalName" />
+-->
+
+                <TextView
+                    android:id="@+id/plantDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtPlantName"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@android:color/darker_gray"
+                    android:gravity="center_vertical"
+                    android:text="29th Aug, 2021"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/plantDate"
+                    android:layout_alignParentStart="true"
+                    android:text="Visit Plant"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

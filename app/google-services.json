@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "743791061017",
+    "project_id": "gardenapp-aab5b",
+    "storage_bucket": "gardenapp-aab5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743791061017:android:093310eb898e1f58e22288",
+        "android_client_info": {
+          "package_name": "com.kirandroid.gardenmonitor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "743791061017-lrni0bef40ucktjd0acu1j106hem6cj2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6VcqZ47nFhOwO19b5ioFjDg2Rf3Ul6e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "743791061017-lrni0bef40ucktjd0acu1j106hem6cj2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

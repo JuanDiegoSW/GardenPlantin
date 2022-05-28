@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WikiPlantProfileActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/nestedScroll"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/image_layout"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/plantImage"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/circle_bg"
+                    android:backgroundTint="@color/light_green"
+                    android:id="@+id/backButton"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    app:tint="@color/greenVar2"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:padding="6dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                    android:paddingStart="13dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@id/image_layout"
+                android:backgroundTint="@color/light_green"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/top_rounded_circle"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Common Name"
+                    android:textStyle="bold"
+                    android:textColor="@color/greenVar2"
+                    android:textSize="28sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/txtPlantCommonName"
+                    android:layout_marginStart="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scientific Name"
+                    android:layout_below="@id/txtPlantCommonName"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:id="@+id/txtPlantScientificName"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/plantAttrRecycler"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/txtPlantScientificName" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:layout_below="@id/plantAttrRecycler"
+                    android:layout_marginStart="15dp"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/txtPlantDescription"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Azadirachta indica, commonly known as neem, nimtree or Indian lilac, is a tree in the mahogany family Meliaceae. It is one of two species in the genus Azadirachta, and is native to the Indian subcontinent and most of the countries in Africa. It is typically grown in tropical and semi-tropical regions. Neem trees also grow on islands in southern Iran. Its fruits and seeds are the source of neem oil."
+                    tools:targetApi="o" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:paddingEnd="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Try Again!"
+                    android:padding="5dp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentStart="true"
+                    android:textSize="15sp"
+                    android:layout_toStartOf="@id/btnAddPlant"
+                    android:layout_marginEnd="15dp"
+                    android:layout_below="@id/txtPlantDescription"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:id="@+id/btnTryAgain"
+                    android:layout_marginBottom="5dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Plant to My Garden"
+                    android:textAllCaps="false"
+                    android:layout_below="@id/txtPlantDescription"
+                    android:textSize="15sp"
+                    android:paddingStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/btnAddPlant"
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="5dp"
+                    android:padding="5dp" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+<!--
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="-120dp"
+        android:layout_above="@id/bottomRelativeLayout"
+        android:layout_below="@id/nestedScroll"
+        android:backgroundTint="@color/greenVar2"
+        android:background="@drawable/green_transparent"
+        />
+-->
+
+
+
+
+
+
+
+
+</RelativeLayout>

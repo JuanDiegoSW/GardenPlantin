@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="false"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            app:cardCornerRadius="8dp"
+            android:id="@+id/imageCardView"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon"
+                android:layout_height="match_parent"
+                android:id="@+id/selectedImageView"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_below="@id/imageCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/uploadingAnimLayout"
+            android:visibility="gone"
+            android:layout_marginTop="-15dp"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:lottie_rawRes="@raw/file_uploading_anim"
+                android:layout_below="@id/chipGroup"
+                android:padding="0dp"
+                android:layout_marginTop="0dp"
+                android:id="@+id/uploading_anim"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="60%"
+                android:id="@+id/txtUploadingPercentage"
+                android:layout_marginTop="-15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Organ"
+            android:visibility="visible"
+            android:id="@+id/txtOrgan"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/greenVar2"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_below="@id/imageCardView"
+            android:layout_centerHorizontal="true" />
+
+
+<!--        Chip Group-->
+        <com.google.android.material.chip.ChipGroup
+            android:layout_height="wrap_content"
+            android:id="@+id/chipGroup"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            app:selectionRequired="true"
+            app:singleSelection="true"
+            android:layout_below="@id/txtOrgan"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_medium"
+                app:chipIconEnabled="true"
+                app:iconStartPadding="5dp"
+                app:chipEndPadding="8dp"
+                android:textColor="@color/greenVar2"
+                app:chipStartPadding="6dp"
+                app:chipIcon="@drawable/leaf_icon"
+                app:chipIconTint="@color/greenVar2"
+                android:text="Leaf" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                app:iconStartPadding="5dp"
+                app:chipEndPadding="8dp"
+                android:textColor="@color/greenVar2"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_medium"
+                app:chipStartPadding="6dp"
+                app:chipIconEnabled="true"
+                app:chipIcon="@drawable/flower_icon"
+                app:chipIconTint="@color/greenVar2"
+                android:text="Flower" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:textColor="@color/greenVar2"
+                android:fontFamily="@font/quicksand_medium"
+                app:chipIconEnabled="true"
+                app:iconStartPadding="5dp"
+                android:textStyle="bold"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="6dp"
+                app:chipIconTint="@color/greenVar2"
+                app:chipIcon="@drawable/apple_icon"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Fruit" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_below="@id/chipGroup"
+            android:id="@+id/buttonLayout"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:id="@+id/btnCancel"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp"
+                android:text="Cancel"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnUpload"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:text="Upload"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
